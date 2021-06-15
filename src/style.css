@@ -7,9 +7,13 @@
   --color-gray-2: #484b54;
   --color-gray-3: #484c61;
   --color-gray-4: #3c4a50;
+  --color-gray-5: #5d504f;
   --color-1: #4a3753;
   --color-2: #18a367;
   --color-3: #42b078;
+  --color-4: #df4e4e;
+  --color-5: #303fa9;
+  --color-6: #162633;
 }
 
 *, *::before, *::after {
@@ -48,7 +52,7 @@ img {
 .img-cover {
   display: block;
   width: 100%;
-  /* height: 10rem; */
+  height: 100%;
   object-fit: cover;
 }
 
@@ -107,7 +111,8 @@ hgroup h3 {
   right: 0;
   left: 0;
   bottom: 0;
-  padding: 3rem 3rem;
+  padding: 6rem 6rem;
+  backface-visibility: hidden;
 }
 
 .effect .title {
@@ -1006,4 +1011,302 @@ hgroup h3 {
 .effect-milo:hover .description {
   opacity: 1;
   transform: translate3d(0, 0, 0)
+}
+
+/* Julia */
+
+.effect-julia {
+  background-color: var(--body-color);
+  text-align: left;
+}
+
+.effect-julia .image {
+  backface-visibility: hidden;
+  transition: opacity 1s, transform 1s;
+}
+
+.effect-julia:hover .image {
+  opacity: .4;
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.effect-julia .caption {
+  padding: 4rem 4rem;
+}
+
+.effect-julia .title {
+  margin-bottom: 1.5rem;
+}
+
+.effect-julia .description p {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  padding: .5rem 1.25rem;
+  background: rgba(255, 255, 255, .9);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--body-color);
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-julia .description p:nth-of-type(2) {
+  transition-delay: 0.05s;
+}
+
+.effect-julia .description p:nth-of-type(3) {
+  transition-delay: 0.1s;
+}
+
+.effect-julia .description p:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.effect-julia:hover .description p {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Goliath */
+
+.effect-goliath {
+  background-color: #df4e4e;
+  text-align: left;
+}
+
+.effect-goliath .image {
+  backface-visibility: hidden;
+  transition: transform 0.35s;
+}
+
+.effect-goliath:hover .image {
+  transform: translate3d(0, -8rem, 0)
+}
+
+.effect-goliath .title, .effect-goliath .description {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 3rem 3rem;
+}
+
+.effect-goliath .title {
+  transition: transform 0.35s;
+}
+
+.effect-goliath:hover .title {
+  transform: translate3d(0, -10rem, 0)
+}
+
+.effect-goliath .description {
+  opacity: 0;
+  transform: translate3d(0, 5rem, 0);
+  font-size: 1.8rem;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-goliath:hover .description {
+  opacity: 1;
+  transform: translate3d(0, 0, 0)
+}
+
+/* Hera */
+
+.effect-hera {
+  background-color: var(--color-5);
+  perspective: 100rem;
+}
+
+.effect-hera .title {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+  transition: transform 0.3s, opacity 0.35s;
+}
+
+.effect-hera:hover .title {
+  opacity: 0;
+  transform: translate3d(0, -50%, 0) scale(0)
+}
+
+.effect-hera .caption {
+  backface-visibility: hidden;
+}
+
+.effect-hera .caption::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+  transform-origin: 50%;
+  width: 20rem;
+  height: 20rem;
+  border: 2px solid var(--color-white);
+  transition: transform .35s, opacity 0.35s;
+}
+
+.effect-hera:hover .caption::before {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+}
+
+.effect-hera .files-icon a {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 3.2rem;
+  color: var(--color-white);
+  transition: opacity 0.35s, top 0.35s, right 0.35s, bottom 0.35s, left 0.35s
+}
+
+.effect-hera .files-icon a:nth-of-type(2) {
+  top: 25%;
+  left: 75%;
+}
+
+.effect-hera .files-icon a:nth-of-type(3) {
+  top: 75%;
+  left: 25%;
+}
+
+.effect-hera .files-icon a:nth-of-type(4) {
+  top: 75%;
+  left: 75%;
+}
+
+.effect-hera:hover .files-icon a {
+  opacity: 1;
+  top: 45%;
+  left: 47%;
+}
+
+.effect-hera:hover .files-icon a:nth-of-type(2) {
+  left: 53%
+}
+
+.effect-hera:hover .files-icon a:nth-of-type(3) {
+  top: 55%;
+}
+
+.effect-hera:hover .files-icon a:nth-of-type(4) {
+  left: 53%;
+  top: 55%;
+}
+
+/* Winston */
+
+.effect-winston {
+  background-color: var(--color-6);
+  text-align: left;
+}
+
+.effect-winston .image {
+  transition: opacity 0.45s;
+}
+
+.effect-winston:hover .image {
+  opacity: 0.6;
+}
+
+.effect-winston .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 3rem, 0);
+  width: 100%;
+  padding: 4rem 4rem;
+  transition: transform 0.35s;
+}
+
+.effect-winston:hover .title {
+  transform: translate3d(0, 0, 0)
+}
+
+.effect-winston .icons {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transform: rotate3d(0, 0, 1, 45deg);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  padding: 8rem 4rem 3rem;
+  background-color: rgba(255, 255, 255, .75);
+  font-size: 2.4rem;
+  text-align: right;
+  transition: opacity .45s, transform 0.45s;
+  transform-origin: 0% 100%;
+}
+
+.effect-winston:hover .icons {
+  opacity: 1;
+  transform: rotate3d(0, 0, 1, 0deg)
+}
+
+.effect-winston .icons a {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, 5rem, 0);
+  display: inline-block;
+  margin: 0 1rem;
+  color: var(--color-gray-5);
+  transition: transform 0.35s, opacity 0.35s;
+}
+
+.effect-winston:hover .icons a {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.effect-winston .icons a:nth-of-type(1) {
+  transition-delay: 0.25s;
+}
+
+.effect-winston .icons a:nth-of-type(2) {
+  transition-delay: 0.15s;
+}
+
+/* Selena */
+
+.effect-selena {
+  background-color: var(--color-white);
+  perspective: 100rem;
+}
+
+.effect-selena .image {
+  opacity: 0.95;
+  transition: transform 0.35s
+}
+
+.effect-selena:hover .image {
+  transform: scale3d(0.95, 0.95, 1)
+}
+
+.effect-selena .title {
+  transform: translate3d(0, 3rem, 0);
+  transition: transform 0.35s;
+}
+
+.effect-selena:hover .title {
+  transform: translate3d(0, 0, 0);
+}
+
+.effect-selena .description {
+  opacity: 0;
+  transform: perspective(100rem) rotate3d(1, 0, 0, 90deg);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: transform 0.35s, opacity 0.35s;
+}
+
+.effect-selena:hover .description {
+  opacity: 1;
+  transform: perspective(100rem) rotate3d(0, 0, 0, 90deg)
 }
