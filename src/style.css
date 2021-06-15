@@ -14,6 +14,7 @@
   --color-4: #df4e4e;
   --color-5: #303fa9;
   --color-6: #162633;
+  --color-7: #675983;
 }
 
 *, *::before, *::after {
@@ -1309,4 +1310,177 @@ hgroup h3 {
 .effect-selena:hover .description {
   opacity: 1;
   transform: perspective(100rem) rotate3d(0, 0, 0, 90deg)
+}
+
+/* Terry */
+
+.effect-terry {
+  background-color: #34495e;
+}
+
+.effect-terry .image {
+  opacity: 0.95;
+  transition: opacity 0.35s
+}
+
+.effect-terry:hover .image {
+  opacity: .6;
+}
+
+.effect-terry .caption::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 3rem 7.5rem 7.5rem 3rem;
+  border-style: solid;
+  border-color: #000;
+  background-color: transparent;
+  transform: perspective(100rem) scale3d(2, 2, 2);
+  transition: transform .35s
+}
+
+.effect-terry:hover .caption::before {
+  transform: scale3d(1.075, 1.075, 1.005)
+}
+
+.effect-terry .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate3d(100%, -5px, 0);
+  padding: 1.5rem 2rem;
+  text-align: left;
+  transition: transform 0.35s;
+}
+
+.effect-terry:hover .title {
+  transform: translate3d(0, 0, 0)
+}
+
+.effect-terry .icons-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+
+.effect-terry .icons-box a {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(5rem, 0, 0);
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  color: #fff;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.effect-terry .icons-box a:nth-of-type(2) {
+  transition-delay: 0.05s;
+}
+
+.effect-terry .icons-box a:nth-of-type(3) {
+  transition-delay: 0.1s;
+}
+
+.effect-terry .icons-box a:nth-of-type(4) {
+  transition-delay: 0.15s;
+}
+
+.effect-terry:hover .icons-box a {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Phoebe */
+
+.effect-phoebe {
+  background-color: var(--color-7);
+}
+
+/* .effect-phoebe::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, -100%, 0);
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(103, 89, 131, 0.75);
+  transition: transform 0.35s;
+}
+
+.effect-phoebe:hover::before {
+  transform: translate3d(0, 0, 0)
+} */
+
+.effect-phoebe .image {
+  opacity: 0.95;
+  transition: opacity 0.35s;
+}
+
+.effect-phoebe:hover .image {
+  opacity: 0.75;
+}
+
+.effect-phoebe .caption::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(103, 89, 131, 0.75);
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% calc(100% - 3rem), 3rem 3rem, calc(100% - 3rem) 3rem, 50% calc(100% - 3rem), 50% 100%, 100% 100%, 100% 0%);
+  transform: scale3d(5, 2.5, 1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s;
+}
+
+.effect-phoebe:hover .caption::before {
+  transform: scale3d(1, 1, 1);
+}
+
+.effect-phoebe .title {
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+  transform: translate3d(0, 3rem, 0);
+  transition: transform 0.35s;
+}
+
+.effect-phoebe:hover .title {
+  transform: translate3d(0, 0, 0)
+}
+
+.effect-phoebe .icons-box a {
+  position: relative;
+  opacity: 0;
+  margin: 0 .5rem;
+  display: inline-block;
+  font-size: 2.4rem;
+  color: var(--color-white);
+  transition: transform .35s, opacity 0.35s;
+}
+
+.effect-phoebe .icons-box a:nth-of-type(1) {
+  transform: translate3d(-10rem, -5rem, 0)
+}
+
+.effect-phoebe .icons-box a:nth-of-type(2) {
+  transform: translate3d(0, 5rem, 0)
+}
+
+.effect-phoebe .icons-box a:nth-of-type(3) {
+  transform: translate3d(10rem, -5rem, 0)
+}
+
+.effect-phoebe:hover .icons-box a {
+  opacity: 1;
+  transform: translate3d(0, 0, 0)
 }
